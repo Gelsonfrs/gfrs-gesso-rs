@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Gfrs-Gesso RS — soluções em gesso e drywall em Porto Alegre e região. Forros, paredes, divisórias, sancas e acabamentos. Solicite seu orçamento.">
+
+    <meta name="theme-color" content="#111111">
+
+    <title>Gfrs-Gesso RS | Gesso e Drywall em Porto Alegre</title>
+
+    <style>
+        :root {
+            --bg: #0b0b0c;
+            --surface: #151516;
+            --surface-2: #1d1d1f;
+            --text: #f5f5f5;
+            --muted: #b7b7ba;
+            --accent: #d7a94b;
+            --accent-light: #f0cc7a;
+            --border: rgba(255,255,255,.10);
+            --max: 1180px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(92%, var(--max));
+            margin: auto;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11,11,12,.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 1.45rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+            .logo span {
+                color: var(--accent);
+            }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+            nav a {
+                color: #ddd;
+                font-size: .95rem;
+                transition: .2s;
+            }
+
+                nav a:hover {
+                    color: var(--accent-light);
+                }
+
+        .nav-button {
+            background: var(--accent);
+            color: #111;
+            padding: 11px 17px;
+            border-radius: 7px;
+            font-weight: 800;
+        }
+
+        .hero {
+            min-height: 680px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient( rgba(0,0,0,.20), rgba(0,0,0,.48) ), url("imagens/capa.jfif");
+            background-size: 98% 60%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+
+
+
+            .hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient( circle at center, transparent 0%, rgba(0,0,0,.15) 45%, rgba(0,0,0,.35) 100% );
+                pointer-events: none;
+            }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            padding: 90px 0;
+        }
+
+
+        .eyebrow {
+            color: var(--accent-light);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: .8rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: .98;
+            margin-bottom: 25px;
+        }
+
+            h1 span {
+                color: var(--accent);
+            }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #d0d0d2;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 32px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            padding: 0 24px;
+            border-radius: 7px;
+            font-weight: 800;
+            border: 1px solid var(--border);
+            transition: transform .2s, opacity .2s;
+        }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                opacity: .92;
+            }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #111;
+            border-color: var(--accent);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,.06);
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 45px;
+        }
+
+            .section-title .eyebrow {
+                margin-bottom: 10px;
+            }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            transition: .25s;
+        }
+
+            .card:hover {
+                transform: translateY(-4px);
+                border-color: rgba(215,169,75,.5);
+            }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 9px;
+            background: rgba(215,169,75,.12);
+            color: var(--accent-light);
+            font-size: 1.35rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 9px;
+            font-size: 1.15rem;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: .95rem;
+        }
+
+        .dark-section {
+            background: #101011;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .checks {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+            .checks li::before {
+                content: "✓";
+                color: var(--accent);
+                font-weight: 900;
+                margin-right: 10px;
+            }
+
+        .photo-placeholder {
+            min-height: 390px;
+            border-radius: 15px;
+            border: 1px dashed rgba(255,255,255,.25);
+            background: linear-gradient(145deg, #242426, #101011);
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: #999;
+            padding: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #202022;
+            border: 1px solid var(--border);
+            display: grid;
+            place-items: center;
+            color: #888;
+            text-align: center;
+            padding: 0;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+        .photos-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+            .photos-gallery .gallery-item {
+                aspect-ratio: 4 / 3;
+            }
+
+                .photos-gallery .gallery-item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    cursor: pointer;
+                    transition: transform .3s ease;
+                }
+
+                .photos-gallery .gallery-item:hover img {
+                    transform: scale(1.05);
+                }
+        /* =========================
+   VÍDEO EM DESTAQUE
+   ========================= */
+
+        .video-destaque {
+            width: 100%;
+            min-height: 300px;
+            background: #202022;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            margin-bottom: 18px;
+            overflow: hidden;
+        }
+
+            .video-destaque video {
+                display: block;
+                width: auto;
+                max-width: 100%;
+                max-height: 75vh;
+                height: auto;
+                background: #000;
+                border-radius: 6px;
+            }
+
+
+        /* Celular */
+        @media (max-width: 600px) {
+
+            .video-destaque {
+                min-height: 250px;
+                padding: 5px;
+            }
+
+                .video-destaque video {
+                    height: 400px;
+                    max-height: 65vh;
+                }
+        }
+
+        @media (max-width: 600px) {
+            .photos-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+    .hero {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+        .work-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient( to bottom, rgba(0,0,0,.85), rgba(0,0,0,.45), transparent );
+            color: white;
+            grid-column: 1 / -1;
+        }
+
+            .work-title strong {
+                display: block;
+                font-size: .95rem;
+                text-transform: uppercase;
+                letter-spacing: .5px;
+            }
+
+            .work-title small {
+                display: block;
+                margin-top: 2px;
+                color: #ddd;
+                font-size: .75rem;
+            }
+
+        .before-photo {
+            position: relative;
+            overflow: hidden;
+            min-width: 0;
+        }
+
+
+
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .quote {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .stars {
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .quote p {
+            color: #ddd;
+            margin-bottom: 18px;
+        }
+
+        .quote strong {
+            font-size: .9rem;
+        }
+
+        .areas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .area {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 999px;
+            padding: 9px 15px;
+            color: #ddd;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #191919, #0d0d0e);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 55px;
+            text-align: center;
+        }
+
+            .contact p {
+                color: var(--muted);
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 35px 0;
+            color: #888;
+            text-align: center;
+            font-size: .9rem;
+        }
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            background: #25d366;
+            color: white;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 1.55rem;
+            font-weight: 900;
+            box-shadow: 0 8px 30px rgba(0,0,0,.35);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-size: 1.7rem;
+            width: 46px;
+            height: 46px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+
+            .menu-toggle {
+                display: grid;
+                place-items: center;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 74px;
+                left: 0;
+                right: 0;
+                background: #0b0b0c;
+                border-bottom: 1px solid var(--border);
+                padding: 20px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+                z-index: 1001;
+            }
+
+                nav.active {
+                    display: flex;
+                }
+
+                nav a {
+                    display: block;
+                    padding: 12px 15px;
+                    border-radius: 7px;
+                }
+
+                    nav a:hover {
+                        background: rgba(255,255,255,.06);
+                    }
+
+            .nav-button {
+                text-align: center;
+            }
+
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* LIGHTBOX DAS FOTOS */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.92);
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+            .lightbox.active {
+                display: flex;
+            }
+
+            .lightbox img {
+                max-width: 95%;
+                max-height: 90vh;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
+            }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255,255,255,.12);
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+            .lightbox-close:hover {
+                background: var(--accent);
+                color: #111;
+            }
+
+        .gallery-item.photo {
+            cursor: pointer;
+        }
+
+        /* =========================
+   FORMULÁRIO DE AVALIAÇÃO
+   ========================= */
+
+.review-box {
+    max-width: 760px;
+    margin: 55px auto 0;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.review-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.review-header .eyebrow {
+    margin-bottom: 10px;
+}
+
+.review-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.review-header p {
+    color: var(--muted);
+}
+
+.review-form {
+    display: grid;
+    gap: 22px;
+}
+
+.form-group {
+    display: grid;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #eee;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    background: #0d0d0e;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: white;
+    padding: 14px 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: .2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(215,169,75,.10);
+}
+
+
+/* ESTRELAS */
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 3px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2.2rem;
+    color: #555;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: var(--accent);
+}
+
+.rating input:checked ~ label {
+    color: var(--accent);
+}
+
+.review-button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .review-box {
+        padding: 25px 20px;
+        margin-top: 40px;
+    }
+
+    .review-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .rating label {
+        font-size: 2rem;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+
+            <a href="#inicio" class="logo">
+                Gfrs-<span>Gesso</span> RS
+            </a>
+
+            <nav id="menu">
+                <a href="#servicos">Serviços</a>
+                <a href="#trabalhos">Trabalhos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#contato" class="nav-button">Orçamento</a>
+            </nav>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menu">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="container hero-content">
+                <div class="eyebrow">Gesso & Drywall • Porto Alegre e região</div>
+                <h1>Gesso e Drywall em Porto Alegre.<br><span>Seu ambiente. Do jeito que você imaginou.</span></h1>
+                <p>
+                    Soluções em gesso e drywall para residências, apartamentos,
+                    comércios e empresas, com atenção aos detalhes e acabamento profissional.
+                </p>
+
+                <div class="actions">
+                    <a class="btn btn-primary" href="#contato">Pedir orçamento</a>
+                    <a class="btn btn-secondary" href="#trabalhos">Ver nossos trabalhos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <div class="container">
+                <div class="section-title">
+                    <div class="eyebrow">O que fazemos</div>
+                    <h2>Nossos serviços</h2>
+                    <p>Soluções para transformar, dividir, renovar e valorizar seus ambientes.</p>
+                </div>
+
+                <div class="services">
+                    <article class="card">
+                        <div class="icon">▦</div>
+                        <h3>Drywall</h3>
+                        <p>Execução de paredes, divisórias e soluções em drywall para diferentes ambientes.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">⌂</div>
+                        <h3>Forros Modulares / Minerais</h3>
+                        <p>Forros modular e mineral, para criar ambientes modernos e bem acabados.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">◇</div>
+                        <h3>Sancas com iluminação</h3>
+                        <p>Soluções decorativas para valorizar iluminação e acabamento do ambiente.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">□</div>
+                        <h3>Painéis de parede</h3>
+                        <p>Transformar as paredes com painéis decorativos é uma das formas mais rápidas e impactantes de elevar o nível da decoração.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">⌒</div>
+                        <h3>Cortineiros</h3>
+                        <p>Detalhes em gesso para integrar cortinas e iluminação ao projeto.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">✦</div>
+                        <h3>Iluminação em gesso</h3>
+                        <p>Preparação de detalhes e estruturas para projetos de iluminação.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">↗</div>
+                        <h3>Acabamentos</h3>
+                        <p>Detalhamento e acabamento para entregar um resultado limpo e profissional.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">+</div>
+                        <h3>Reparos</h3>
+                        <p>Manutenção e correções em estruturas e acabamentos de gesso e drywall.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="dark-section" id="sobre">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <div class="eyebrow">Sobre a empresa</div>
+                    <h2>Qualidade, compromisso e acabamento profissional.</h2>
+                    <p>
+                        A Gfrs-Gesso RS trabalha com soluções em gesso e drywall em Porto Alegre
+                        e região, buscando entregar um serviço de qualidade, com atenção aos
+                        detalhes, bom atendimento e compromisso com cada obra.
+                    </p>
+                    <p>
+                        Nosso objetivo é transformar a necessidade do cliente em uma solução
+                        funcional, bonita e bem executada.
+                    </p>
+
+                    <ul class="checks">
+                        <li>Atendimento em Porto Alegre e região</li>
+                        <li>Orçamento personalizado</li>
+                        <li>Serviços residenciais e comerciais</li>
+                        <li>Foco em acabamento e qualidade</li>
+                    </ul>
+                </div>
+
+                <div class="photo-placeholder">
+                    <div>
+                        <strong>FOTO REAL DA EQUIPE / OBRA</strong><br>
+                        <small>Substituiremos este espaço por uma foto sua.</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trabalhos">
+            <div class="container">
+
+                <div class="section-title">
+                    <div class="eyebrow">Portfólio</div>
+                    <h2>Nossos Trabalhos</h2>
+                    <p>
+                        Aqui vamos mostrar fotos e vídeos reais das obras:
+                        antes e depois.
+                    </p>
+                </div>
+
+                <!-- VÍDEO EM DESTAQUE -->
+                <div class="video-destaque">
+                    <video controls playsinline preload="metadata">
+                        <source src="imagens/video01.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                </div>
+
+                <!-- GALERIA DE FOTOS -->
+                <div class="photos-gallery">
+
+                    <div class="gallery-item photo">
+                        <img src="imagens/Obra01.jpg"
+                             alt="Obra 01 - Gfrs-Gesso RS">
+                    </div>
+
+                    <div class="gallery-item photo">
+                        <img src="imagens/Obra04.jpg"
+                             alt="Obra 04 - Gfrs-Gesso RS">
+                    </div>
+
+                    <div class="gallery-item photo">
+                        <img src="imagens/Obra03.jpg"
+                             alt="Obra 03 - Gfrs-Gesso RS">
+                    </div>
+
+                    <div class="gallery-item photo">
+                        <img src="imagens/Obra02.jpg"
+                             alt="Obra 02 - Gfrs-Gesso RS">
+                    </div>
+
+                    <div class="gallery-item photo">
+                        <img src="imagens/Obra06.jpg"
+                             alt="Obra 06 - Gfrs-Gesso RS">
+                    </div>
+
+                    <div class="gallery-item photo">
+                        <img src="imagens/Obra05.jpg"
+                             alt="Obra 05 - Gfrs-Gesso RS">
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="dark-section" id="depoimentos">
+            <div class="container">
+
+                <div class="section-title">
+                    <div class="eyebrow">Clientes</div>
+                    <h2>O que nossos clientes dizem</h2>
+                    <p>
+                        Sua opinião é muito importante para nós.
+                        Deixe sua avaliação sobre o serviço realizado.
+                    </p>
+                </div>
+
+                <!-- DEPOIMENTOS -->
+                <div class="testimonials">
+
+                    <article class="quote">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            “Excelente trabalho, acabamento muito bem feito
+                            e equipe muito profissional.”
+                        </p>
+                        <strong>Cliente Gfrs-Gesso RS</strong>
+                    </article>
+
+                    <article class="quote">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            “Ficou exatamente como imaginávamos.
+                            Atendimento e resultado excelentes.”
+                        </p>
+                        <strong>Cliente Gfrs-Gesso RS</strong>
+                    </article>
+
+                    <article class="quote">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            “Serviço bem executado e acabamento de qualidade.
+                            Recomendo.”
+                        </p>
+                        <strong>Cliente Gfrs-Gesso RS</strong>
+                    </article>
+
+                </div>
+
+
+                <!-- FORMULÁRIO DE AVALIAÇÃO -->
+                <div class="review-box">
+
+                    <div class="review-header">
+                        <div class="eyebrow">Avalie nosso trabalho</div>
+
+                        <h3>
+                            Já fizemos um serviço para você?
+                        </h3>
+
+                        <p>
+                            Conte como foi sua experiência com a
+                            Gfrs-Gesso RS.
+                        </p>
+                    </div>
+
+
+                    <form action="https://formspree.io/f/SEU_CODIGO"
+                          method="POST"
+                          class="review-form">
+
+                        <div class="form-group">
+
+                            <label for="nome">
+                                Seu nome
+                            </label>
+
+                            <input type="text"
+                                   id="nome"
+                                   name="nome"
+                                   placeholder="Digite seu nome"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Sua avaliação
+                            </label>
+
+                            <div class="rating">
+
+                                <input type="radio"
+                                       id="star5"
+                                       name="avaliacao"
+                                       value="5 estrelas"
+                                       required>
+
+                                <label for="star5">★</label>
+
+
+                                <input type="radio"
+                                       id="star4"
+                                       name="avaliacao"
+                                       value="4 estrelas">
+
+                                <label for="star4">★</label>
+
+
+                                <input type="radio"
+                                       id="star3"
+                                       name="avaliacao"
+                                       value="3 estrelas">
+
+                                <label for="star3">★</label>
+
+
+                                <input type="radio"
+                                       id="star2"
+                                       name="avaliacao"
+                                       value="2 estrelas">
+
+                                <label for="star2">★</label>
+
+
+                                <input type="radio"
+                                       id="star1"
+                                       name="avaliacao"
+                                       value="1 estrela">
+
+                                <label for="star1">★</label>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="comentario">
+                                Seu comentário
+                            </label>
+
+                            <textarea id="comentario"
+                                      name="comentario"
+                                      rows="5"
+                                      placeholder="Escreva aqui sua experiência..."
+                                      required></textarea>
+
+                        </div>
+
+
+                        <!-- Assunto do e-mail -->
+                        <input type="hidden"
+                               name="_subject"
+                               value="Nova avaliação - Gfrs-Gesso RS">
+
+
+                        <button type="submit"
+                                class="btn btn-primary review-button">
+
+                            Enviar avaliação
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <div class="eyebrow">Área de atendimento</div>
+                    <h2>Atendemos Porto Alegre e região</h2>
+                    <p>Depois vamos inserir aqui as cidades e regiões que você realmente atende.</p>
+                </div>
+
+                <div class="areas">
+                    <span class="area">Porto Alegre</span>
+                    <span class="area">Região Metropolitana</span>
+                    <span class="area">Consulte sua região</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="dark-section" id="contato">
+            <div class="container">
+
+                <div class="contact">
+
+                    <div class="eyebrow">Vamos conversar</div>
+
+                    <h2>Precisa de gesso ou drywall?</h2>
+
+                    <p>
+                        Envie algumas fotos do local, diga qual serviço você precisa e
+                        solicite seu orçamento diretamente pelo WhatsApp.
+                    </p>
+
+                    <div class="actions">
+                        <a class="btn btn-primary"
+                           href="https://wa.me/5551992579835"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Pedir orçamento pelo WhatsApp
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <strong>Gfrs-Gesso RS</strong> — Gesso e Drywall em Porto Alegre e região.
+            <br>© 2026 Gfrs-Gesso RS. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP — TROCAR O NÚMERO -->
+    <a class="whatsapp" href="https://wa.me/5551992579835" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.004 2C6.478 2 2 6.477 2 12c0 1.77.463 3.43 1.268 4.89L2 22l5.255-1.237A9.96 9.96 0 0 0 12.004 22C17.53 22 22 17.523 22 12S17.53 2 12.004 2m0 18.2a8.2 8.2 0 0 1-4.183-1.145l-.3-.178-3.12.734.743-3.043-.195-.312A8.2 8.2 0 1 1 12.004 20.2" />
+        </svg>
+    </a>
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">
+            ×
+        </button>
+
+        <img id="lightboxImage" src="" alt="">
+    </div>
+
+    <script>
+        // =========================
+        // MENU MOBILE
+        // =========================
+
+        const menuToggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", function () {
+
+            menu.classList.toggle("active");
+
+            const aberto = menu.classList.contains("active");
+
+            menuToggle.setAttribute("aria-expanded", aberto);
+
+            menuToggle.setAttribute(
+                "aria-label",
+                aberto ? "Fechar menu" : "Abrir menu"
+            );
+
+            menuToggle.textContent = aberto ? "✕" : "☰";
+        });
+
+
+        menu.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                menu.classList.remove("active");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Abrir menu"
+                );
+
+                menuToggle.textContent = "☰";
+            });
+
+        });
+
+
+        // =========================
+        // LIGHTBOX DAS FOTOS
+        // =========================
+
+        const fotos = document.querySelectorAll(
+            ".photos-gallery .gallery-item img"
+        );
+
+        const lightbox = document.getElementById("lightbox");
+
+        const lightboxImage = document.getElementById(
+            "lightboxImage"
+        );
+
+        const lightboxClose = document.getElementById(
+            "lightboxClose"
+        );
+
+
+        // =========================
+        // ABRIR FOTO
+        // =========================
+
+        fotos.forEach(function (foto) {
+
+            foto.addEventListener("click", function () {
+
+                lightboxImage.src = foto.src;
+
+                lightboxImage.alt = foto.alt;
+
+                lightbox.classList.add("active");
+
+                document.body.style.overflow = "hidden";
+
+            });
+
+        });
+
+
+        // =========================
+        // FECHAR LIGHTBOX
+        // =========================
+
+        function fecharLightbox() {
+
+            lightbox.classList.remove("active");
+
+            lightboxImage.src = "";
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        // =========================
+        // BOTÃO X
+        // =========================
+
+        lightboxClose.addEventListener(
+            "click",
+            fecharLightbox
+        );
+
+
+        // =========================
+        // CLICAR FORA DA FOTO
+        // =========================
+
+        lightbox.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === lightbox) {
+
+                    fecharLightbox();
+
+                }
+
+            }
+        );
+
+
+        // =========================
+        // TECLA ESC
+        // =========================
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key === "Escape") {
+
+                    fecharLightbox();
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+</body>
+</html>
+
