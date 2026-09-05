@@ -402,11 +402,23 @@
         }
         @media (max-width: 600px) {
             .hero {
+                min-height: 650px;
                 background-size: 100% auto;
-                background-position: center top;
+                background-position: center center;
                 background-repeat: no-repeat;
             }
+
+                .hero::before {
+                    background: rgba(0, 0, 0, 0.45);
+                }
+
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                padding: 70px 20px;
+            }
         }
+
 }
 
 
